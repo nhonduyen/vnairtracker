@@ -78,17 +78,17 @@ $(function () {
 
   function getPollutionString(pollutionIndex) {
     let pollutionInfo = '';
-    if (pollutionIndex < 50)
+    if (pollutionIndex <= 50)
       pollutionInfo = 'Good';
-    if (pollutionIndex > 50 && pollutionIndex < 100)
+    if (pollutionIndex > 50 && pollutionIndex <= 100)
       pollutionInfo = 'Moderate';
-    if (pollutionIndex > 100 && pollutionIndex < 150)
+    if (pollutionIndex > 100 && pollutionIndex <= 150)
       pollutionInfo = 'Unhealthy for Sensitive Groups';
-    if (pollutionIndex > 150 && pollutionIndex < 200)
+    if (pollutionIndex > 150 && pollutionIndex <= 200)
       pollutionInfo = 'Unhealthy';
-    if (pollutionIndex > 200 && pollutionIndex < 300)
+    if (pollutionIndex > 200 && pollutionIndex <= 300)
       pollutionInfo = 'Very Unhealthy';
-    if (pollutionIndex > 300 && pollutionIndex < 500)
+    if (pollutionIndex > 300 && pollutionIndex <= 500)
       pollutionInfo = 'Hazardous';
     return pollutionInfo;
   }
@@ -101,7 +101,7 @@ $(function () {
     let weatherUpdateDate = new Date(data.data.current.weather.ts.toString());
     let trPollution =
       `<td>${data.data.current.pollution.aqicn+ " " + cnPollution}</td>
-      <td>${data.data.current.pollution.aqius + " " +usPollution}</td>
+      <td>${data.data.current.pollution.aqius + " " + usPollution}</td>
       <td>${data.data.current.pollution.maincn}</td>
       <td>${data.data.current.pollution.mainus}</td>
       <td>${pollutionUpdateDate.toLocaleDateString() + " " + pollutionUpdateDate.toLocaleTimeString()}</td>
