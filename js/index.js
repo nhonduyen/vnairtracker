@@ -104,7 +104,7 @@ $(function () {
       <td>${data.data.current.pollution.aqius + " " + usPollution}</td>
       <td>${data.data.current.pollution.maincn}</td>
       <td>${data.data.current.pollution.mainus}</td>
-      <td>${pollutionUpdateDate.toLocaleDateString() + " " + pollutionUpdateDate.toLocaleTimeString()}</td>
+      <td>${pollutionUpdateDate.toLocaleString()}</td>
       `;
     let weatherInfo = getWeatherinfo(data.data.current.weather.ic);
     let trWeather =
@@ -114,7 +114,7 @@ $(function () {
       <td>${data.data.current.weather.tp}</td>
       <td>${data.data.current.weather.wd}</td>
       <td>${data.data.current.weather.ws}</td>
-      <td>${weatherUpdateDate.toLocaleDateString() + " " + weatherUpdateDate.toLocaleTimeString()}</td>
+      <td>${weatherUpdateDate.toLocaleString()}</td>
       `;
     $('#tbPolution tbody').empty();
     $('#tbWeather tbody').empty();
